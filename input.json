@@ -1,0 +1,1 @@
+Running CLI command show ip ospf neighbor State codes: atmpt - attempt, exchg - exchange, exst - exchange start, load - loading, 2-way - two-way Op codes: gdown - going down, gup - going up Neighbor ID Pri State Op Intf address Interface ----------- --- ----- -- ------------ --------- 10.145.2.0 1 full up 10.145.2.32 bundle-1.3900 10.145.2.2 1 full up 10.145.2.34 bundle-2.3900
