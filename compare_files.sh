@@ -1,39 +1,41 @@
 #!/bin/bash
 
-# Function to extract fields from a line
-extract_fields() {
-    local line="$1"
-    echo "$line" | awk '{print $1,$3,$5,$7,$9,$11,$13,$15,$17}'
+# ANSI escape codes for colors
+RED='\033[0;31m'  # Red color
+RESET='\033[0m'   # Reset color to default
+
+read_field_names() {
+    # Read the second line of the file and split it by '|'
+    field_line=$(sed '2q;d' "$1")
+    IFS='|' read -r -a fields <<< "$field_line"
+    echo "${fields[@]}"
 }
 
-# Compare two lines
-compare_lines() {
-    local line1="$1"
-    local line2="$2"
-    local fields1=$(extract_fields "$line1")
-    local fields2=$(extract_fields "$line2")
-    if [ "$fields1" != "$fields2" ]; then
-        echo "Mismatch:"
-        echo "File 1: $line1"
-        echo "File 2: $line2"
-    fi
-}
+compare_files() {
+    # Read field names from both files
+    read -r -a field_names1 <<< "$(read_field_names "$1")"
+    read -r -a field_names2 <<< "$(read_field_names "$2")"
 
-# Main function
-main() {
-    file1="$1"
-    file2="$2"
-
+    # Read table data from both files
     while IFS= read -r line1 && IFS= read -r line2 <&3; do
-        compare_lines "$line1" "$line2"
-    done < "$file1" 3< "$file2"
+        IFS='|' read -r -a fields1 <<< "$line1"
+        IFS='|' read -r -a fields2 <<< "$line2"
+
+        # Compare corresponding fields
+        for ((i = 0; i < ${#fields1[@]}; i++)); do
+            if [[ ${fields1[i]} != ${fields2[i]} ]]; then
+                printf "%bError: Mismatch in '${field_names1[i]}': ${fields1[i]} (file1) != ${fields2[i]} (file2)%b\n" "$RED" "$RESET"
+            fi
+        done
+    done < "$1" 3< "$2"
 }
 
-# Check if correct number of arguments is provided
 if [ "$#" -ne 2 ]; then
     echo "Usage: $0 file1 file2"
     exit 1
 fi
 
-main "$1" "$2"
+file1="$1"
+file2="$2"
+compare_files "$file1" "$file2"
 
