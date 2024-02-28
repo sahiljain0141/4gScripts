@@ -1,1 +1,1 @@
-------------------------- Executing Command---------------------------------- sshpass -p Operator@123 ssh -q -o StrictHostKeyChecking=no operator@192.168.111.181 "show ip bgp neighbor" ----------------------------------------------------------------------------- Running CLI command show ip bgp neighbor Local address Port Remote address Port Ad Peer Sts FSM state ID ------------- ---- -------------- ---- -- -------- --------- ---- 10.145.3.17 42503 10.145.3.16 179 en up established 3 10.145.202.1 0 10.145.202.2 0 en up active 5
+
