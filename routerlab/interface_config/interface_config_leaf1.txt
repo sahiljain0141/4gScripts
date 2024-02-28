@@ -1,0 +1,1810 @@
+{
+  "collection": {
+    "show-interface:detail": [
+      {
+        "name": "phy-1_9_1",
+        "index": 33,
+        "description": "leaf-spine link towards LOCAL-SPINE-002",
+        "interface-mode": "Lag-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "116 hour(s) 11 min(s) 9 sec(s) ago",
+        "mtu": 9676,
+        "speed": "40g",
+        "mac": "1c:34:da:19:58:21",
+        "bia": "1c:34:da:19:58:21",
+        "referring": [
+          {
+            "resource-description": "Interface bundle-2"
+          },
+          {
+            "resource-description": "MTU profile 2"
+          }
+      {
+        "name": "phy-1_11_1",
+        "index": 41,
+        "description": "leaf-spine link towards LOCAL-SPINE-001",
+        "interface-mode": "Lag-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 8,
+        "last-change": "104 hour(s) 12 min(s) 37 sec(s) ago",
+        "mtu": 9676,
+        "speed": "40g",
+        "mac": "1c:34:da:19:58:29",
+        "bia": "1c:34:da:19:58:29",
+        "referring": [
+          {
+            "resource-description": "Interface bundle-1"
+          },
+          {
+            "resource-description": "MTU profile 2"
+          }
+      {
+        "name": "phy-1_12_1",
+        "index": 45,
+        "description": "cp-server link towards LOCAL_COMPUTE001",
+        "interface-mode": "Lag-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 4,
+        "last-change": "26 hour(s) 6 min(s) 10 sec(s) ago",
+        "mtu": 1500,
+        "speed": "25g",
+        "mac": "1c:34:da:19:58:2d",
+        "bia": "1c:34:da:19:58:2d",
+        "referring": [
+          {
+            "resource-description": "Interface bundle-15"
+          },
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "phy-1_13_1",
+        "index": 49,
+        "description": "mgmt link towards LOCAL_MGMT_STACK1",
+        "interface-mode": "Lag-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "116 hour(s) 9 min(s) 5 sec(s) ago",
+        "mtu": 1500,
+        "speed": "1g",
+        "mac": "1c:34:da:19:58:31",
+        "bia": "1c:34:da:19:58:31",
+        "referring": [
+          {
+            "resource-description": "Interface bundle-11"
+          },
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "phy-1_18_1",
+        "index": 69,
+        "description": "Interface phy-1_18_1",
+        "interface-mode": "Bridge-port",
+        "vrf": "global",
+        "admin-status": "down",
+        "oper-status": "down",
+        "reset-count": 1,
+        "last-change": "116 hour(s) 11 min(s) 13 sec(s) ago",
+        "mtu": 1500,
+        "speed": "auto",
+        "mac": "1c:34:da:19:58:45",
+        "bia": "1c:34:da:19:58:45",
+        "referred_by": [
+          {
+            "resource-description": "Interface bvi-1"
+          }
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "phy-1_19_1",
+        "index": 73,
+        "description": "Interface phy-1_19_1",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "down",
+        "reset-count": 1,
+        "last-change": "116 hour(s) 11 min(s) 13 sec(s) ago",
+        "mtu": 1500,
+        "speed": "auto",
+        "mac": "1c:34:da:19:58:49",
+        "bia": "1c:34:da:19:58:49",
+        "referring": [
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "phy-1_22_1",
+        "index": 85,
+        "description": "Interface phy-1_22_1",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "1 hour(s) 57 min(s) 41 sec(s) ago",
+        "mtu": 1500,
+        "speed": "10g",
+        "mac": "1c:34:da:19:58:55",
+        "bia": "1c:34:da:19:58:55",
+        "referring": [
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "phy-1_23_1",
+        "index": 89,
+        "description": "Interface phy-1_23_1",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "down",
+        "reset-count": 1,
+        "last-change": "1 hour(s) 56 min(s) 56 sec(s) ago",
+        "mtu": 1500,
+        "speed": "auto",
+        "mac": "1c:34:da:19:58:59",
+        "bia": "1c:34:da:19:58:59",
+        "referring": [
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "mgmt-0",
+        "index": 129,
+        "description": "OOB management port",
+        "interface-mode": "L3-port",
+        "vrf": "mgmt-vrf",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 1,
+        "last-change": "116 hour(s) 11 min(s) 13 sec(s) ago",
+        "mtu": 1500,
+        "mac": "1c:34:da:19:58:00",
+        "referred_by": [
+          {
+            "resource-description": "IPv4 address-192.168.111.181/24"
+          },
+          {
+            "resource-description": "IPv6 address-fe80::1e34:daff:fe19:5800/64"
+          }
+          {
+            "resource-description": "MTU profile 1"
+          },
+          {
+            "resource-description": "mgmt-vrf"
+          }
+      {
+        "name": "bvi-1",
+        "index": 130,
+        "description": "Interface bvi-1",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 1,
+        "last-change": "116 hour(s) 11 min(s) 12 sec(s) ago",
+        "mtu": 1500,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "Interface bvi-1.90"
+          },
+          {
+            "resource-description": "Interface bvi-1.100"
+          },
+          {
+            "resource-description": "Interface bvi-1.400"
+          },
+          {
+            "resource-description": "Interface bvi-1.401"
+          }
+          {
+            "resource-description": "Interface phy-1_18_1"
+          },
+          {
+            "resource-description": "Interface bundle-11"
+          },
+          {
+            "resource-description": "Interface bundle-15"
+          },
+          {
+            "resource-description": "MTU profile 1"
+          },
+          {
+            "resource-description": "Bridge 1"
+          }
+      {
+        "name": "bundle-1",
+        "index": 131,
+        "description": "Bundle towards LOCAL-SPINE-001",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 14,
+        "last-change": "104 hour(s) 12 min(s) 34 sec(s) ago",
+        "mtu": 9676,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "Interface phy-1_11_1"
+          },
+          {
+            "resource-description": "Interface bundle-1.3900"
+          }
+          {
+            "resource-description": "MTU profile 2"
+          }
+      {
+        "name": "bundle-2",
+        "index": 132,
+        "description": "Bundle towards LOCAL-SPINE-002",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 3,
+        "last-change": "116 hour(s) 11 min(s) 6 sec(s) ago",
+        "mtu": 9676,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "Interface phy-1_9_1"
+          },
+          {
+            "resource-description": "Interface bundle-2.3900"
+          }
+          {
+            "resource-description": "MTU profile 2"
+          }
+      {
+        "name": "bundle-11",
+        "index": 141,
+        "description": "Bundle towards LOCAL_MGMT_STACK1",
+        "interface-mode": "Bridge-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "116 hour(s) 9 min(s) 5 sec(s) ago",
+        "mtu": 1500,
+        "mac": "00:11:22:33:44:55",
+        "referred_by": [
+          {
+            "resource-description": "Interface phy-1_13_1"
+          },
+          {
+            "resource-description": "Interface bvi-1"
+          }
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "bundle-15",
+        "index": 145,
+        "description": "Bundle towards LOCAL_COMPUTE001 (25g)",
+        "interface-mode": "Bridge-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 6,
+        "last-change": "26 hour(s) 6 min(s) 8 sec(s) ago",
+        "mtu": 1500,
+        "mac": "00:11:22:33:44:55",
+        "referred_by": [
+          {
+            "resource-description": "Interface phy-1_12_1"
+          },
+          {
+            "resource-description": "Interface bvi-1"
+          }
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "lo-1",
+        "index": 259,
+        "description": "Interface lo-1",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 1,
+        "last-change": "116 hour(s) 11 min(s) 13 sec(s) ago",
+        "mtu": 1500,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "IPv4 address-10.145.3.4/32"
+          },
+          {
+            "resource-description": "IPv6 address-fd00:0:c10::304/128"
+          },
+          {
+            "resource-description": "IPv6 address-fe80::1e34:daff:fe19:5881/64"
+          },
+          {
+            "resource-description": "Feature AAA (radius)"
+          },
+          {
+            "resource-description": "Feature AAA (tacacs)"
+          },
+          {
+            "resource-description": "SNMP source interface"
+          }
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "lo-2",
+        "index": 260,
+        "description": "Interface lo-2",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 1,
+        "last-change": "116 hour(s) 11 min(s) 14 sec(s) ago",
+        "mtu": 1500,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "IPv4 address-10.145.3.5/32"
+          },
+          {
+            "resource-description": "IPv6 address-fd00:0:c10::305/128"
+          },
+          {
+            "resource-description": "IPv6 address-fe80::1e34:daff:fe19:5881/64"
+          },
+          {
+            "resource-description": "Interface VXLAN 1"
+          }
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "vxlan-1",
+        "index": 515,
+        "description": "LOCAL-LEAF-001 VTEP",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "116 hour(s) 10 min(s) 42 sec(s) ago",
+        "mtu": 1500,
+        "mac": "00:00:00:00:00:00",
+        "referring": [
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "bvi-1.90",
+        "index": 524894,
+        "description": "VLAN90 Gateway",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "116 hour(s) 9 min(s) 6 sec(s) ago",
+        "mtu": 1500,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "IPv4 address-10.145.100.1/24"
+          }
+          {
+            "resource-description": "Interface bvi-1"
+          },
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "bvi-1.100",
+        "index": 524904,
+        "description": "Interface bvi-1.100",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "29 hour(s) 48 min(s) 55 sec(s) ago",
+        "mtu": 1500,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "IPv4 address-10.145.202.1/24"
+          }
+          {
+            "resource-description": "Interface bvi-1"
+          },
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "bvi-1.400",
+        "index": 525204,
+        "description": "VLAN400 Gateway",
+        "interface-mode": "L3-port",
+        "vrf": "dushy",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "116 hour(s) 8 min(s) 58 sec(s) ago",
+        "mtu": 1500,
+        "mac": "1c:34:da:19:58:81",
+        "referring": [
+          {
+            "resource-description": "Interface bvi-1"
+          },
+          {
+            "resource-description": "MTU profile 1"
+          },
+          {
+            "resource-description": "VRF: dushy"
+          }
+      {
+        "name": "bvi-1.401",
+        "index": 525205,
+        "description": "Interface bvi-1.401",
+        "interface-mode": "L3-port",
+        "vrf": "dushy",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "116 hour(s) 7 min(s) 7 sec(s) ago",
+        "mtu": 1500,
+        "mac": "00:11:22:33:44:55",
+        "referred_by": [
+          {
+            "resource-description": "IPv4 address-10.7.41.1/24"
+          }
+          {
+            "resource-description": "Interface bvi-1"
+          },
+          {
+            "resource-description": "MTU profile 1"
+          },
+          {
+            "resource-description": "VRF: dushy"
+          }
+      {
+        "name": "bundle-1.3900",
+        "index": 532800,
+        "description": "Towards LOCAL-SPINE-001 in VRF global",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 8,
+        "last-change": "104 hour(s) 12 min(s) 35 sec(s) ago",
+        "mtu": 9676,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "OSPFv3 instance"
+          },
+          {
+            "resource-description": "IPv4 address-10.145.3.17/31"
+          },
+          {
+            "resource-description": "IPv6 address-fd00:0:c10::311/127"
+          },
+          {
+            "resource-description": "IPv6 address-fe80::1e34:daff:fe19:5881/64"
+          }
+          {
+            "resource-description": "Interface bundle-1"
+          },
+          {
+            "resource-description": "MTU profile 2"
+          }
+      {
+        "name": "bundle-2.3900",
+        "index": 536896,
+        "description": "Towards LOCAL-SPINE-002 in VRF global",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "116 hour(s) 11 min(s) 7 sec(s) ago",
+        "mtu": 9676,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "OSPFv3 instance"
+          },
+          {
+            "resource-description": "IPv4 address-10.145.3.19/31"
+          },
+          {
+            "resource-description": "IPv6 address-fd00:0:c10::313/127"
+          },
+          {
+            "resource-description": "IPv6 address-fe80::1e34:daff:fe19:5881/64"
+          }
+          {
+            "resource-description": "Interface bundle-2"
+          },
+          {
+            "resource-description": "MTU profile 2"
+          }
+{
+  "collection": {
+    "show-interface:detail": [
+      {
+        "name": "phy-1_9_1",
+        "index": 33,
+        "description": "leaf-spine link towards LOCAL-SPINE-002",
+        "interface-mode": "Lag-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "116 hour(s) 28 min(s) 12 sec(s) ago",
+        "mtu": 9676,
+        "speed": "40g",
+        "mac": "1c:34:da:19:58:21",
+        "bia": "1c:34:da:19:58:21",
+        "referring": [
+          {
+            "resource-description": "Interface bundle-2"
+          },
+          {
+            "resource-description": "MTU profile 2"
+          }
+      {
+        "name": "phy-1_11_1",
+        "index": 41,
+        "description": "leaf-spine link towards LOCAL-SPINE-001",
+        "interface-mode": "Lag-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 8,
+        "last-change": "104 hour(s) 29 min(s) 40 sec(s) ago",
+        "mtu": 9676,
+        "speed": "40g",
+        "mac": "1c:34:da:19:58:29",
+        "bia": "1c:34:da:19:58:29",
+        "referring": [
+          {
+            "resource-description": "Interface bundle-1"
+          },
+          {
+            "resource-description": "MTU profile 2"
+          }
+      {
+        "name": "phy-1_12_1",
+        "index": 45,
+        "description": "cp-server link towards LOCAL_COMPUTE001",
+        "interface-mode": "Lag-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 4,
+        "last-change": "26 hour(s) 23 min(s) 13 sec(s) ago",
+        "mtu": 1500,
+        "speed": "25g",
+        "mac": "1c:34:da:19:58:2d",
+        "bia": "1c:34:da:19:58:2d",
+        "referring": [
+          {
+            "resource-description": "Interface bundle-15"
+          },
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "phy-1_13_1",
+        "index": 49,
+        "description": "mgmt link towards LOCAL_MGMT_STACK1",
+        "interface-mode": "Lag-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "116 hour(s) 26 min(s) 8 sec(s) ago",
+        "mtu": 1500,
+        "speed": "1g",
+        "mac": "1c:34:da:19:58:31",
+        "bia": "1c:34:da:19:58:31",
+        "referring": [
+          {
+            "resource-description": "Interface bundle-11"
+          },
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "phy-1_18_1",
+        "index": 69,
+        "description": "Interface phy-1_18_1",
+        "interface-mode": "Bridge-port",
+        "vrf": "global",
+        "admin-status": "down",
+        "oper-status": "down",
+        "reset-count": 1,
+        "last-change": "116 hour(s) 28 min(s) 16 sec(s) ago",
+        "mtu": 1500,
+        "speed": "auto",
+        "mac": "1c:34:da:19:58:45",
+        "bia": "1c:34:da:19:58:45",
+        "referred_by": [
+          {
+            "resource-description": "Interface bvi-1"
+          }
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "phy-1_19_1",
+        "index": 73,
+        "description": "Interface phy-1_19_1",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "down",
+        "reset-count": 1,
+        "last-change": "116 hour(s) 28 min(s) 16 sec(s) ago",
+        "mtu": 1500,
+        "speed": "auto",
+        "mac": "1c:34:da:19:58:49",
+        "bia": "1c:34:da:19:58:49",
+        "referring": [
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "phy-1_22_1",
+        "index": 85,
+        "description": "Interface phy-1_22_1",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "2 hour(s) 14 min(s) 44 sec(s) ago",
+        "mtu": 1500,
+        "speed": "10g",
+        "mac": "1c:34:da:19:58:55",
+        "bia": "1c:34:da:19:58:55",
+        "referring": [
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "phy-1_23_1",
+        "index": 89,
+        "description": "Interface phy-1_23_1",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "down",
+        "reset-count": 1,
+        "last-change": "2 hour(s) 13 min(s) 59 sec(s) ago",
+        "mtu": 1500,
+        "speed": "auto",
+        "mac": "1c:34:da:19:58:59",
+        "bia": "1c:34:da:19:58:59",
+        "referring": [
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "mgmt-0",
+        "index": 129,
+        "description": "OOB management port",
+        "interface-mode": "L3-port",
+        "vrf": "mgmt-vrf",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 1,
+        "last-change": "116 hour(s) 28 min(s) 16 sec(s) ago",
+        "mtu": 1500,
+        "mac": "1c:34:da:19:58:00",
+        "referred_by": [
+          {
+            "resource-description": "IPv4 address-192.168.111.181/24"
+          },
+          {
+            "resource-description": "IPv6 address-fe80::1e34:daff:fe19:5800/64"
+          }
+          {
+            "resource-description": "MTU profile 1"
+          },
+          {
+            "resource-description": "mgmt-vrf"
+          }
+      {
+        "name": "bvi-1",
+        "index": 130,
+        "description": "Interface bvi-1",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 1,
+        "last-change": "116 hour(s) 28 min(s) 15 sec(s) ago",
+        "mtu": 1500,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "Interface bvi-1.90"
+          },
+          {
+            "resource-description": "Interface bvi-1.100"
+          },
+          {
+            "resource-description": "Interface bvi-1.400"
+          },
+          {
+            "resource-description": "Interface bvi-1.401"
+          }
+          {
+            "resource-description": "Interface phy-1_18_1"
+          },
+          {
+            "resource-description": "Interface bundle-11"
+          },
+          {
+            "resource-description": "Interface bundle-15"
+          },
+          {
+            "resource-description": "MTU profile 1"
+          },
+          {
+            "resource-description": "Bridge 1"
+          }
+      {
+        "name": "bundle-1",
+        "index": 131,
+        "description": "Bundle towards LOCAL-SPINE-001",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 14,
+        "last-change": "104 hour(s) 29 min(s) 37 sec(s) ago",
+        "mtu": 9676,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "Interface phy-1_11_1"
+          },
+          {
+            "resource-description": "Interface bundle-1.3900"
+          }
+          {
+            "resource-description": "MTU profile 2"
+          }
+      {
+        "name": "bundle-2",
+        "index": 132,
+        "description": "Bundle towards LOCAL-SPINE-002",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 3,
+        "last-change": "116 hour(s) 28 min(s) 9 sec(s) ago",
+        "mtu": 9676,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "Interface phy-1_9_1"
+          },
+          {
+            "resource-description": "Interface bundle-2.3900"
+          }
+          {
+            "resource-description": "MTU profile 2"
+          }
+      {
+        "name": "bundle-11",
+        "index": 141,
+        "description": "Bundle towards LOCAL_MGMT_STACK1",
+        "interface-mode": "Bridge-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "116 hour(s) 26 min(s) 8 sec(s) ago",
+        "mtu": 1500,
+        "mac": "00:11:22:33:44:55",
+        "referred_by": [
+          {
+            "resource-description": "Interface phy-1_13_1"
+          },
+          {
+            "resource-description": "Interface bvi-1"
+          }
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "bundle-15",
+        "index": 145,
+        "description": "Bundle towards LOCAL_COMPUTE001 (25g)",
+        "interface-mode": "Bridge-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 6,
+        "last-change": "26 hour(s) 23 min(s) 11 sec(s) ago",
+        "mtu": 1500,
+        "mac": "00:11:22:33:44:55",
+        "referred_by": [
+          {
+            "resource-description": "Interface phy-1_12_1"
+          },
+          {
+            "resource-description": "Interface bvi-1"
+          }
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "lo-1",
+        "index": 259,
+        "description": "Interface lo-1",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 1,
+        "last-change": "116 hour(s) 28 min(s) 16 sec(s) ago",
+        "mtu": 1500,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "IPv4 address-10.145.3.4/32"
+          },
+          {
+            "resource-description": "IPv6 address-fd00:0:c10::304/128"
+          },
+          {
+            "resource-description": "IPv6 address-fe80::1e34:daff:fe19:5881/64"
+          },
+          {
+            "resource-description": "Feature AAA (radius)"
+          },
+          {
+            "resource-description": "Feature AAA (tacacs)"
+          },
+          {
+            "resource-description": "SNMP source interface"
+          }
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "lo-2",
+        "index": 260,
+        "description": "Interface lo-2",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 1,
+        "last-change": "116 hour(s) 28 min(s) 16 sec(s) ago",
+        "mtu": 1500,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "IPv4 address-10.145.3.5/32"
+          },
+          {
+            "resource-description": "IPv6 address-fd00:0:c10::305/128"
+          },
+          {
+            "resource-description": "IPv6 address-fe80::1e34:daff:fe19:5881/64"
+          },
+          {
+            "resource-description": "Interface VXLAN 1"
+          }
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "vxlan-1",
+        "index": 515,
+        "description": "LOCAL-LEAF-001 VTEP",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "116 hour(s) 27 min(s) 44 sec(s) ago",
+        "mtu": 1500,
+        "mac": "00:00:00:00:00:00",
+        "referring": [
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "bvi-1.90",
+        "index": 524894,
+        "description": "VLAN90 Gateway",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "116 hour(s) 26 min(s) 8 sec(s) ago",
+        "mtu": 1500,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "IPv4 address-10.145.100.1/24"
+          }
+          {
+            "resource-description": "Interface bvi-1"
+          },
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "bvi-1.100",
+        "index": 524904,
+        "description": "Interface bvi-1.100",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "30 hour(s) 5 min(s) 57 sec(s) ago",
+        "mtu": 1500,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "IPv4 address-10.145.202.1/24"
+          }
+          {
+            "resource-description": "Interface bvi-1"
+          },
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "bvi-1.400",
+        "index": 525204,
+        "description": "VLAN400 Gateway",
+        "interface-mode": "L3-port",
+        "vrf": "dushy",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "116 hour(s) 26 min(s) ago",
+        "mtu": 1500,
+        "mac": "1c:34:da:19:58:81",
+        "referring": [
+          {
+            "resource-description": "Interface bvi-1"
+          },
+          {
+            "resource-description": "MTU profile 1"
+          },
+          {
+            "resource-description": "VRF: dushy"
+          }
+      {
+        "name": "bvi-1.401",
+        "index": 525205,
+        "description": "Interface bvi-1.401",
+        "interface-mode": "L3-port",
+        "vrf": "dushy",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "116 hour(s) 24 min(s) 9 sec(s) ago",
+        "mtu": 1500,
+        "mac": "00:11:22:33:44:55",
+        "referred_by": [
+          {
+            "resource-description": "IPv4 address-10.7.41.1/24"
+          }
+          {
+            "resource-description": "Interface bvi-1"
+          },
+          {
+            "resource-description": "MTU profile 1"
+          },
+          {
+            "resource-description": "VRF: dushy"
+          }
+      {
+        "name": "bundle-1.3900",
+        "index": 532800,
+        "description": "Towards LOCAL-SPINE-001 in VRF global",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 8,
+        "last-change": "104 hour(s) 29 min(s) 37 sec(s) ago",
+        "mtu": 9676,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "OSPFv3 instance"
+          },
+          {
+            "resource-description": "IPv4 address-10.145.3.17/31"
+          },
+          {
+            "resource-description": "IPv6 address-fd00:0:c10::311/127"
+          },
+          {
+            "resource-description": "IPv6 address-fe80::1e34:daff:fe19:5881/64"
+          }
+          {
+            "resource-description": "Interface bundle-1"
+          },
+          {
+            "resource-description": "MTU profile 2"
+          }
+      {
+        "name": "bundle-2.3900",
+        "index": 536896,
+        "description": "Towards LOCAL-SPINE-002 in VRF global",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "116 hour(s) 28 min(s) 9 sec(s) ago",
+        "mtu": 9676,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "OSPFv3 instance"
+          },
+          {
+            "resource-description": "IPv4 address-10.145.3.19/31"
+          },
+          {
+            "resource-description": "IPv6 address-fd00:0:c10::313/127"
+          },
+          {
+            "resource-description": "IPv6 address-fe80::1e34:daff:fe19:5881/64"
+          }
+          {
+            "resource-description": "Interface bundle-2"
+          },
+          {
+            "resource-description": "MTU profile 2"
+          }
+{
+  "collection": {
+    "show-interface:detail": [
+      {
+        "name": "phy-1_9_1",
+        "index": 33,
+        "description": "leaf-spine link towards LOCAL-SPINE-002",
+        "interface-mode": "Lag-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "116 hour(s) 30 min(s) 23 sec(s) ago",
+        "mtu": 9676,
+        "speed": "40g",
+        "mac": "1c:34:da:19:58:21",
+        "bia": "1c:34:da:19:58:21",
+        "referring": [
+          {
+            "resource-description": "Interface bundle-2"
+          },
+          {
+            "resource-description": "MTU profile 2"
+          }
+      {
+        "name": "phy-1_11_1",
+        "index": 41,
+        "description": "leaf-spine link towards LOCAL-SPINE-001",
+        "interface-mode": "Lag-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 8,
+        "last-change": "104 hour(s) 31 min(s) 51 sec(s) ago",
+        "mtu": 9676,
+        "speed": "40g",
+        "mac": "1c:34:da:19:58:29",
+        "bia": "1c:34:da:19:58:29",
+        "referring": [
+          {
+            "resource-description": "Interface bundle-1"
+          },
+          {
+            "resource-description": "MTU profile 2"
+          }
+      {
+        "name": "phy-1_12_1",
+        "index": 45,
+        "description": "cp-server link towards LOCAL_COMPUTE001",
+        "interface-mode": "Lag-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 4,
+        "last-change": "26 hour(s) 25 min(s) 24 sec(s) ago",
+        "mtu": 1500,
+        "speed": "25g",
+        "mac": "1c:34:da:19:58:2d",
+        "bia": "1c:34:da:19:58:2d",
+        "referring": [
+          {
+            "resource-description": "Interface bundle-15"
+          },
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "phy-1_13_1",
+        "index": 49,
+        "description": "mgmt link towards LOCAL_MGMT_STACK1",
+        "interface-mode": "Lag-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "116 hour(s) 28 min(s) 19 sec(s) ago",
+        "mtu": 1500,
+        "speed": "1g",
+        "mac": "1c:34:da:19:58:31",
+        "bia": "1c:34:da:19:58:31",
+        "referring": [
+          {
+            "resource-description": "Interface bundle-11"
+          },
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "phy-1_18_1",
+        "index": 69,
+        "description": "Interface phy-1_18_1",
+        "interface-mode": "Bridge-port",
+        "vrf": "global",
+        "admin-status": "down",
+        "oper-status": "down",
+        "reset-count": 1,
+        "last-change": "116 hour(s) 30 min(s) 27 sec(s) ago",
+        "mtu": 1500,
+        "speed": "auto",
+        "mac": "1c:34:da:19:58:45",
+        "bia": "1c:34:da:19:58:45",
+        "referred_by": [
+          {
+            "resource-description": "Interface bvi-1"
+          }
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "phy-1_19_1",
+        "index": 73,
+        "description": "Interface phy-1_19_1",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "down",
+        "reset-count": 1,
+        "last-change": "116 hour(s) 30 min(s) 27 sec(s) ago",
+        "mtu": 1500,
+        "speed": "auto",
+        "mac": "1c:34:da:19:58:49",
+        "bia": "1c:34:da:19:58:49",
+        "referring": [
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "phy-1_22_1",
+        "index": 85,
+        "description": "Interface phy-1_22_1",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "2 hour(s) 16 min(s) 55 sec(s) ago",
+        "mtu": 1500,
+        "speed": "10g",
+        "mac": "1c:34:da:19:58:55",
+        "bia": "1c:34:da:19:58:55",
+        "referring": [
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "phy-1_23_1",
+        "index": 89,
+        "description": "Interface phy-1_23_1",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "down",
+        "reset-count": 1,
+        "last-change": "2 hour(s) 16 min(s) 10 sec(s) ago",
+        "mtu": 1500,
+        "speed": "auto",
+        "mac": "1c:34:da:19:58:59",
+        "bia": "1c:34:da:19:58:59",
+        "referring": [
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "mgmt-0",
+        "index": 129,
+        "description": "OOB management port",
+        "interface-mode": "L3-port",
+        "vrf": "mgmt-vrf",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 1,
+        "last-change": "116 hour(s) 30 min(s) 27 sec(s) ago",
+        "mtu": 1500,
+        "mac": "1c:34:da:19:58:00",
+        "referred_by": [
+          {
+            "resource-description": "IPv4 address-192.168.111.181/24"
+          },
+          {
+            "resource-description": "IPv6 address-fe80::1e34:daff:fe19:5800/64"
+          }
+          {
+            "resource-description": "MTU profile 1"
+          },
+          {
+            "resource-description": "mgmt-vrf"
+          }
+      {
+        "name": "bvi-1",
+        "index": 130,
+        "description": "Interface bvi-1",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 1,
+        "last-change": "116 hour(s) 30 min(s) 26 sec(s) ago",
+        "mtu": 1500,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "Interface bvi-1.90"
+          },
+          {
+            "resource-description": "Interface bvi-1.100"
+          },
+          {
+            "resource-description": "Interface bvi-1.400"
+          },
+          {
+            "resource-description": "Interface bvi-1.401"
+          }
+          {
+            "resource-description": "Interface phy-1_18_1"
+          },
+          {
+            "resource-description": "Interface bundle-11"
+          },
+          {
+            "resource-description": "Interface bundle-15"
+          },
+          {
+            "resource-description": "MTU profile 1"
+          },
+          {
+            "resource-description": "Bridge 1"
+          }
+      {
+        "name": "bundle-1",
+        "index": 131,
+        "description": "Bundle towards LOCAL-SPINE-001",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 14,
+        "last-change": "104 hour(s) 31 min(s) 48 sec(s) ago",
+        "mtu": 9676,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "Interface phy-1_11_1"
+          },
+          {
+            "resource-description": "Interface bundle-1.3900"
+          }
+          {
+            "resource-description": "MTU profile 2"
+          }
+      {
+        "name": "bundle-2",
+        "index": 132,
+        "description": "Bundle towards LOCAL-SPINE-002",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 3,
+        "last-change": "116 hour(s) 30 min(s) 20 sec(s) ago",
+        "mtu": 9676,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "Interface phy-1_9_1"
+          },
+          {
+            "resource-description": "Interface bundle-2.3900"
+          }
+          {
+            "resource-description": "MTU profile 2"
+          }
+      {
+        "name": "bundle-11",
+        "index": 141,
+        "description": "Bundle towards LOCAL_MGMT_STACK1",
+        "interface-mode": "Bridge-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "116 hour(s) 28 min(s) 19 sec(s) ago",
+        "mtu": 1500,
+        "mac": "00:11:22:33:44:55",
+        "referred_by": [
+          {
+            "resource-description": "Interface phy-1_13_1"
+          },
+          {
+            "resource-description": "Interface bvi-1"
+          }
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "bundle-15",
+        "index": 145,
+        "description": "Bundle towards LOCAL_COMPUTE001 (25g)",
+        "interface-mode": "Bridge-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 6,
+        "last-change": "26 hour(s) 25 min(s) 22 sec(s) ago",
+        "mtu": 1500,
+        "mac": "00:11:22:33:44:55",
+        "referred_by": [
+          {
+            "resource-description": "Interface phy-1_12_1"
+          },
+          {
+            "resource-description": "Interface bvi-1"
+          }
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "lo-1",
+        "index": 259,
+        "description": "Interface lo-1",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 1,
+        "last-change": "116 hour(s) 30 min(s) 27 sec(s) ago",
+        "mtu": 1500,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "IPv4 address-10.145.3.4/32"
+          },
+          {
+            "resource-description": "IPv6 address-fd00:0:c10::304/128"
+          },
+          {
+            "resource-description": "IPv6 address-fe80::1e34:daff:fe19:5881/64"
+          },
+          {
+            "resource-description": "Feature AAA (radius)"
+          },
+          {
+            "resource-description": "Feature AAA (tacacs)"
+          },
+          {
+            "resource-description": "SNMP source interface"
+          }
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "lo-2",
+        "index": 260,
+        "description": "Interface lo-2",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 1,
+        "last-change": "116 hour(s) 30 min(s) 27 sec(s) ago",
+        "mtu": 1500,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "IPv4 address-10.145.3.5/32"
+          },
+          {
+            "resource-description": "IPv6 address-fd00:0:c10::305/128"
+          },
+          {
+            "resource-description": "IPv6 address-fe80::1e34:daff:fe19:5881/64"
+          },
+          {
+            "resource-description": "Interface VXLAN 1"
+          }
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "vxlan-1",
+        "index": 515,
+        "description": "LOCAL-LEAF-001 VTEP",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "116 hour(s) 29 min(s) 55 sec(s) ago",
+        "mtu": 1500,
+        "mac": "00:00:00:00:00:00",
+        "referring": [
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "bvi-1.90",
+        "index": 524894,
+        "description": "VLAN90 Gateway",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "116 hour(s) 28 min(s) 19 sec(s) ago",
+        "mtu": 1500,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "IPv4 address-10.145.100.1/24"
+          }
+          {
+            "resource-description": "Interface bvi-1"
+          },
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "bvi-1.100",
+        "index": 524904,
+        "description": "Interface bvi-1.100",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "30 hour(s) 8 min(s) 8 sec(s) ago",
+        "mtu": 1500,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "IPv4 address-10.145.202.1/24"
+          }
+          {
+            "resource-description": "Interface bvi-1"
+          },
+          {
+            "resource-description": "MTU profile 1"
+          }
+      {
+        "name": "bvi-1.400",
+        "index": 525204,
+        "description": "VLAN400 Gateway",
+        "interface-mode": "L3-port",
+        "vrf": "dushy",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "116 hour(s) 28 min(s) 11 sec(s) ago",
+        "mtu": 1500,
+        "mac": "1c:34:da:19:58:81",
+        "referring": [
+          {
+            "resource-description": "Interface bvi-1"
+          },
+          {
+            "resource-description": "MTU profile 1"
+          },
+          {
+            "resource-description": "VRF: dushy"
+          }
+      {
+        "name": "bvi-1.401",
+        "index": 525205,
+        "description": "Interface bvi-1.401",
+        "interface-mode": "L3-port",
+        "vrf": "dushy",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "116 hour(s) 26 min(s) 20 sec(s) ago",
+        "mtu": 1500,
+        "mac": "00:11:22:33:44:55",
+        "referred_by": [
+          {
+            "resource-description": "IPv4 address-10.7.41.1/24"
+          }
+          {
+            "resource-description": "Interface bvi-1"
+          },
+          {
+            "resource-description": "MTU profile 1"
+          },
+          {
+            "resource-description": "VRF: dushy"
+          }
+      {
+        "name": "bundle-1.3900",
+        "index": 532800,
+        "description": "Towards LOCAL-SPINE-001 in VRF global",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 8,
+        "last-change": "104 hour(s) 31 min(s) 48 sec(s) ago",
+        "mtu": 9676,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "OSPFv3 instance"
+          },
+          {
+            "resource-description": "IPv4 address-10.145.3.17/31"
+          },
+          {
+            "resource-description": "IPv6 address-fd00:0:c10::311/127"
+          },
+          {
+            "resource-description": "IPv6 address-fe80::1e34:daff:fe19:5881/64"
+          }
+          {
+            "resource-description": "Interface bundle-1"
+          },
+          {
+            "resource-description": "MTU profile 2"
+          }
+      {
+        "name": "bundle-2.3900",
+        "index": 536896,
+        "description": "Towards LOCAL-SPINE-002 in VRF global",
+        "interface-mode": "L3-port",
+        "vrf": "global",
+        "admin-status": "up",
+        "oper-status": "up",
+        "reset-count": 2,
+        "last-change": "116 hour(s) 30 min(s) 20 sec(s) ago",
+        "mtu": 9676,
+        "mac": "1c:34:da:19:58:81",
+        "referred_by": [
+          {
+            "resource-description": "OSPFv3 instance"
+          },
+          {
+            "resource-description": "IPv4 address-10.145.3.19/31"
+          },
+          {
+            "resource-description": "IPv6 address-fd00:0:c10::313/127"
+          },
+          {
+            "resource-description": "IPv6 address-fe80::1e34:daff:fe19:5881/64"
+          }
+          {
+            "resource-description": "Interface bundle-2"
+          },
+          {
+            "resource-description": "MTU profile 2"
+          }
+Processing interface configuration data
+------------------------- Executing Command---------------------------------- 
+----------------------------------------------------------------------------- 
+interface configuration brief phy-1_9_1
+ interface-mode Lag-port
+ admin-status   up
+ oper-status    up
+ link-speed     40g
+ mtu            9676
+ vrf            global
+ description    "leaf-spine link towards LOCAL-SPINE-002"
+interface configuration brief phy-1_11_1
+ interface-mode Lag-port
+ admin-status   up
+ oper-status    up
+ link-speed     40g
+ mtu            9676
+ vrf            global
+ description    "leaf-spine link towards LOCAL-SPINE-001"
+interface configuration brief phy-1_12_1
+ interface-mode Lag-port
+ admin-status   up
+ oper-status    up
+ link-speed     25g
+ mtu            1500
+ vrf            global
+ description    "cp-server link towards LOCAL_COMPUTE001"
+interface configuration brief phy-1_13_1
+ interface-mode Lag-port
+ admin-status   up
+ oper-status    up
+ link-speed     1g
+ mtu            1500
+ vrf            global
+ description    "mgmt link towards LOCAL_MGMT_STACK1"
+interface configuration brief phy-1_18_1
+ interface-mode Bridge-port
+ admin-status   down
+ oper-status    down
+ link-speed     auto
+ mtu            1500
+ vrf            global
+ description    "Interface phy-1_18_1"
+interface configuration brief phy-1_19_1
+ interface-mode L3-port
+ admin-status   up
+ oper-status    down
+ link-speed     auto
+ mtu            1500
+ vrf            global
+ description    "Interface phy-1_19_1"
+interface configuration brief phy-1_22_1
+ interface-mode L3-port
+ admin-status   up
+ oper-status    up
+ link-speed     10g
+ mtu            1500
+ vrf            global
+ description    "Interface phy-1_22_1"
+interface configuration brief phy-1_23_1
+ interface-mode L3-port
+ admin-status   up
+ oper-status    down
+ link-speed     auto
+ mtu            1500
+ vrf            global
+ description    "Interface phy-1_23_1"
+interface configuration brief mgmt-0
+ interface-mode L3-port
+ admin-status   up
+ oper-status    up
+ mtu            1500
+ vrf            mgmt-vrf
+ description    "OOB management port"
+interface configuration brief bvi-1
+ interface-mode L3-port
+ admin-status   up
+ oper-status    up
+ mtu            1500
+ vrf            global
+ description    "Interface bvi-1"
+interface configuration brief bundle-1
+ interface-mode L3-port
+ admin-status   up
+ oper-status    up
+ mtu            9676
+ vrf            global
+ description    "Bundle towards LOCAL-SPINE-001"
+interface configuration brief bundle-2
+ interface-mode L3-port
+ admin-status   up
+ oper-status    up
+ mtu            9676
+ vrf            global
+ description    "Bundle towards LOCAL-SPINE-002"
+interface configuration brief bundle-11
+ interface-mode Bridge-port
+ admin-status   up
+ oper-status    up
+ mtu            1500
+ vrf            global
+ description    "Bundle towards LOCAL_MGMT_STACK1"
+interface configuration brief bundle-15
+ interface-mode Bridge-port
+ admin-status   up
+ oper-status    up
+ mtu            1500
+ vrf            global
+ description    "Bundle towards LOCAL_COMPUTE001 (25g)"
+interface configuration brief lo-1
+ interface-mode L3-port
+ admin-status   up
+ oper-status    up
+ mtu            1500
+ vrf            global
+ description    "Interface lo-1"
+interface configuration brief lo-2
+ interface-mode L3-port
+ admin-status   up
+ oper-status    up
+ mtu            1500
+ vrf            global
+ description    "Interface lo-2"
+interface configuration brief vxlan-1
+ interface-mode L3-port
+ admin-status   up
+ oper-status    up
+ mtu            1500
+ vrf            global
+ description    "LOCAL-LEAF-001 VTEP"
+interface configuration brief bvi-1.90
+ interface-mode L3-port
+ admin-status   up
+ oper-status    up
+ mtu            1500
+ vrf            global
+ description    "VLAN90 Gateway"
+interface configuration brief bvi-1.100
+ interface-mode L3-port
+ admin-status   up
+ oper-status    up
+ mtu            1500
+ vrf            global
+ description    "Interface bvi-1.100"
+interface configuration brief bvi-1.400
+ interface-mode L3-port
+ admin-status   up
+ oper-status    up
+ mtu            1500
+ vrf            dushy
+ description    "VLAN400 Gateway"
+interface configuration brief bvi-1.401
+ interface-mode L3-port
+ admin-status   up
+ oper-status    up
+ mtu            1500
+ vrf            dushy
+ description    "Interface bvi-1.401"
+interface configuration brief bundle-1.3900
+ interface-mode L3-port
+ admin-status   up
+ oper-status    up
+ mtu            9676
+ vrf            global
+ description    "Towards LOCAL-SPINE-001 in VRF global"
+interface configuration brief bundle-2.3900
+ interface-mode L3-port
+ admin-status   up
+ oper-status    up
+ mtu            9676
+ vrf            global
+ description    "Towards LOCAL-SPINE-002 in VRF global"

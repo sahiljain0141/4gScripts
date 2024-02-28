@@ -1,0 +1,47 @@
+{
+  "collection": {
+    "router-bgp:all-bgp-neighbours": [
+      {
+        "peer-vrf-name": "global",
+        "local-address-type": "ipv4",
+        "local-addr-config": "10.145.3.5",
+        "local-port-config": 0,
+        "remote-addr-type": "ipv4",
+        "remote-addr-config": "10.145.3.1",
+        "remote-port-config": 0,
+        "interface-scope-id": 0,
+        "local-as": 64544,
+        "remote-as": 64544,
+        "local-addr": "10.145.3.5",
+        "local-port": 40667,
+        "remote-port": 179,
+        "peer-state": "Established",
+        "peer-bfd-state": "not-required",
+        "peer-up-time": 356728,
+        "peer-total-msg-rx": 15302,
+        "peer-total-msg-tx": 15319,
+        "peer-prefix-rx": 0,
+        "peer-prefix-tx": 0
+      },
+      {
+        "peer-vrf-name": "global",
+        "local-address-type": "ipv4",
+        "local-addr-config": "10.145.3.5",
+        "local-port-config": 0,
+        "remote-addr-type": "ipv4",
+        "remote-addr-config": "10.145.3.3",
+        "remote-port-config": 0,
+        "interface-scope-id": 0,
+        "local-as": 64544,
+        "remote-as": 64544,
+        "local-addr": "10.145.3.5",
+        "local-port": 37631,
+        "remote-port": 179,
+        "peer-state": "Established",
+        "peer-bfd-state": "not-required",
+        "peer-up-time": 399780,
+        "peer-total-msg-rx": 15325,
+        "peer-total-msg-tx": 15316,
+        "peer-prefix-rx": 0,
+        "peer-prefix-tx": 0
+      }

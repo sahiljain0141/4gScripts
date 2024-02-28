@@ -1,0 +1,10 @@
+ESI                              Type          ES-IF          VTEPs
+--------------------------------------------------------------------------------------    N/A          N/A          
+00:01:7b:9a:63:c5:86:01:02:0b    L          bundle-11          
+Matching Entries:
+ESI	Matching_Host_IDs	Matching_Types	Status	Failure_Reason
+Non-Matching Entries:
+ESI	Host_ID	Type
+--------------------------------------------------------------------------------------	LOCAL-LEAF-001	N/A
+00:01:7b:9a:63:c5:86:01:02:0b	LOCAL-LEAF-001	L
+
