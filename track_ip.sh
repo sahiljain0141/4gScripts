@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# Set the shell option to exit immediately if a command returns a non-zero status
-#set -e
+#set -x
 
 # Replace with your actual credentials and IP address
 OUTPUT_FILE=track.txt
@@ -300,7 +299,8 @@ for ((leaf_idx=1; leaf_idx <= ${num_leafs}; leaf_idx++)); do
   fi
 
 
-  cmd="${l2vpn_cmd[@]} ${mac_cmd[@]} show l2vpn evpn es; ${ping_cmd[@]}"
+  cmd="${l2vpn_cmd[@]} ${mac_cmd[@]} show l2vpn evpn es;" 
+  ping_string="${ping_cmd[@]}"
 
   if [[ $debug == "true" ]]; then
 	  {
@@ -314,6 +314,8 @@ for ((leaf_idx=1; leaf_idx <= ${num_leafs}; leaf_idx++)); do
    echo "$output"
   } >> "${SSH_CMD_OUTPUT_FILE}"
 
+  ######### Execute Ping Command Over SSH Uusing Python Utility paramiko ##########
+  python3 ssh_command.py ${SWITCH_IP} "${ping_string}" "${SSH_CMD_OUTPUT_FILE}"
   
   ##############################################################################################################################
 
@@ -360,8 +362,14 @@ for ((leaf_idx=1; leaf_idx <= ${num_leafs}; leaf_idx++)); do
 	  vni+=("$(( DEFAULT_VNI + vlan_output[$i] ))")
 	  es_or_bundle+=("${elements[1]}")
 
-	  
- 	  ping_output_line=$(echo "$output" | grep -E -A4 "\bPING ${ip} \(" | sed -n '/---/,/---/p')
+	  # Extract ping output line from the file for the current IP address
+	  file_name="$SSH_CMD_OUTPUT_FILE"
+	  ping_output_line=$(grep -E -A4 "\bPING ${ip} \(" "$file_name" | sed -n '/---/,/---/p')
+
+          if [[ "$DEBUG" == "true" ]]; then
+		  echo "ping_line : $ping_output_line"
+	  fi
+ 	  #ping_output_line=$(echo "$output" | grep -E -A4 "\bPING ${ip} \(" | sed -n '/---/,/---/p')
 	  loss_percentage+=("$(echo "${ping_output_line}" | awk '/loss/ {print $6}' | sed 's/%/ /g')")
  
 
@@ -463,10 +471,10 @@ for ((i = 1; i <= num_leafs; i+=2)); do
     track_file1="$ZONE/leaf${i}_track_output.txt"
     track_file2="$ZONE/leaf$((i+1))_track_output.txt"
 
-    if [[ -f "${track_file1}" && -f ${track_file2} ]]; then
+    if [[ -f "${track_file1}" && -f "${track_file2}" ]]; then
 	echo "Comparing track_output_data for leaf$i and leaf$((i+1))"
         # Perform comparison using your preferred method, for example:
-	python3 compare_files.py $track_file1 $track_file2
+	python3 compare_files.py "$track_file1" "$track_file2"
     else
         echo "Track output file not found for leaf."
     fi
