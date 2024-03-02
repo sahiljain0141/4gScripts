@@ -169,6 +169,7 @@ for ((leaf_idx=1; leaf_idx <= ${num_leafs}; leaf_idx++)); do
 	 continue
  fi
 
+ echo "------------ Tracking for leaf${leaf_idx}----------------"
 # Reset variable values
  vlan=""
  vni=()
@@ -188,7 +189,7 @@ for ((leaf_idx=1; leaf_idx <= ${num_leafs}; leaf_idx++)); do
  next_hop_cmd=()
  grep_cmd=()
  ping_cmd=()
-
+ time=()
  # Define an associative array for each leaf
  declare -A leaf_data
  leaf=()
@@ -321,8 +322,8 @@ for ((leaf_idx=1; leaf_idx <= ${num_leafs}; leaf_idx++)); do
 
  {
   printf "%-20s %s\n" "LeafName: $leaf_name" "LeafIP: ${SWITCH_IP}"
-  printf "%-15s | %-12s | %-6s | %-24s | %-34s | %-30s | %-20s | %-10s | %-5s\n" \
-	    "Tracked IP" "Local/Remote" "VNI" "MAC Address" "ES ID" "ES Local IPs" "Leaf Names" "Bundle ID" "Ping Loss"
+  printf "%-15s | %-12s | %-6s | %-24s | %-34s | %-30s | %-20s | %-10s | %-10s | %-20s\n" \
+	    "Tracked IP" "Local/Remote" "VNI" "MAC Address" "ES ID" "ES Local IPs" "Leaf Names" "Bundle ID" "Ping Loss" "Time"
   printf "%s\n" "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 } >> "${TRACK_OUTPUT_FILE}"
 
@@ -360,6 +361,54 @@ for ((leaf_idx=1; leaf_idx <= ${num_leafs}; leaf_idx++)); do
 	  # Access the elements
 	  #vni+=("${elements[0]}")
 	  vni+=("$(( DEFAULT_VNI + vlan_output[$i] ))")
+	  time_line=$(echo "$mac_line" | grep -w "VNI ${vni[-1]}" )
+	  time_info=$(echo "$time_line" | awk '{for (i=1; i<=NF; i++) { 
+	    if ($i == "hour(s)" || $i == "hours") {
+		print $(i-1), $i, $(i+1), $(i+2)
+	    }
+	    else if ($i == "min(s)" || $i == "mins") {
+		print $(i-1), $i, $(i+1),$(i+2)
+	    }
+	    else if ($i == "sec(s)") {
+		print $(i-1), $i
+	    }
+	  }}')
+
+
+
+
+	time_info=$(echo "$time_line" | awk '{
+	    found_hours=0; found_minutes=0; found_seconds=0;
+	    for (i=1; i<=NF; i++) { 
+		if ($i == "hour(s)" || $i == "hours") {
+		    print $(i-1), $i, $(i+1), $(i+2);
+		    found_hours=1;
+		}
+		else if ($i == "min(s)" || $i == "mins") {
+		    if (found_hours == 0) {
+			print $(i-1), $i, $(i+1), $(i+2);
+			found_minutes=1;
+		    }
+		}
+		else if ($i == "sec(s)") {
+		    if (found_hours == 0 && found_minutes == 0) {
+			print $(i-1), $i;
+			found_seconds=1;
+		    }
+		}
+		if (found_hours == 1 && found_minutes == 1 && found_seconds == 1) {
+		    break;
+		}
+	    }
+	}')
+
+
+
+
+
+	  time+=("${time_info}") 
+	  echo "time : ${time[-1]}"
+
 	  es_or_bundle+=("${elements[1]}")
 
 	  # Extract ping output line from the file for the current IP address
@@ -427,8 +476,8 @@ for ((leaf_idx=1; leaf_idx <= ${num_leafs}; leaf_idx++)); do
 	
       {	
         # Print values in tabular format
-	printf "%-15s | %-12s | %-6s | %-24s | %-34s | %-30s | %-20s | %-10s | %-5s\n" \
-		    "$ip" "$local_or_remote_value" "${vni[-1]}" "${mac_address[-1]}" "${esid[-1]}" "$ip0,$ip1" "$remote_leaf_1,$remote_leaf_2" "${bundle_id[-1]}" "${loss_percentage[-1]}"
+	printf "%-15s | %-12s | %-6s | %-24s | %-34s | %-30s | %-20s | %-10s | %-10s | %-20s\n" \
+		    "$ip" "$local_or_remote_value" "${vni[-1]}" "${mac_address[-1]}" "${esid[-1]}" "$ip0,$ip1" "$remote_leaf_1,$remote_leaf_2" "${bundle_id[-1]}" "${loss_percentage[-1]}" "${time[-1]}"
       } >> "${TRACK_OUTPUT_FILE}"
 
 
