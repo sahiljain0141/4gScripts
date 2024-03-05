@@ -165,7 +165,7 @@ fi
 ################## Loop through each leaf switch #######################
 for ((leaf_idx=1; leaf_idx <= ${num_leafs}; leaf_idx++)); do
 
- if [[ ! ("$SWITCH_NAME" == "leaf${leaf_idx}" || "$SWITCH_NAME" == "all") ]];then
+ if [[ ! ("$SWITCH_NAME" =~ "leaf${leaf_idx}" || "$SWITCH_NAME" == "all") ]];then
 	 continue
  fi
 
@@ -183,6 +183,7 @@ for ((leaf_idx=1; leaf_idx <= ${num_leafs}; leaf_idx++)); do
  es_or_bundle=()
  track_ips=()
  l2vpn_cmd=()
+ mac_cmd=()
  unique_vnis=()
  vlan_output=()
  ip_output=()
@@ -362,22 +363,8 @@ for ((leaf_idx=1; leaf_idx <= ${num_leafs}; leaf_idx++)); do
 	  #vni+=("${elements[0]}")
 	  vni+=("$(( DEFAULT_VNI + vlan_output[$i] ))")
 	  time_line=$(echo "$mac_line" | grep -w "VNI ${vni[-1]}" )
-	  time_info=$(echo "$time_line" | awk '{for (i=1; i<=NF; i++) { 
-	    if ($i == "hour(s)" || $i == "hours") {
-		print $(i-1), $i, $(i+1), $(i+2)
-	    }
-	    else if ($i == "min(s)" || $i == "mins") {
-		print $(i-1), $i, $(i+1),$(i+2)
-	    }
-	    else if ($i == "sec(s)") {
-		print $(i-1), $i
-	    }
-	  }}')
 
-
-
-
-	time_info=$(echo "$time_line" | awk '{
+    	  time_info=$(echo "$time_line" | awk '{
 	    found_hours=0; found_minutes=0; found_seconds=0;
 	    for (i=1; i<=NF; i++) { 
 		if ($i == "hour(s)" || $i == "hours") {
@@ -403,12 +390,7 @@ for ((leaf_idx=1; leaf_idx <= ${num_leafs}; leaf_idx++)); do
 	}')
 
 
-
-
-
 	  time+=("${time_info}") 
-	  echo "time : ${time[-1]}"
-
 	  es_or_bundle+=("${elements[1]}")
 
 	  # Extract ping output line from the file for the current IP address
@@ -489,8 +471,10 @@ for ((leaf_idx=1; leaf_idx <= ${num_leafs}; leaf_idx++)); do
 		  printf "%s \n" "bundle_id : ${bundle_id[$i]}"
 		  printf "%s \n" "MAC LINE : $mac_line"
                   printf "%s \n" "ping_output_line : ${ping_output_line}"
+	          printf "%s \n" "time : ${time[$i]}"
 		  printf "%s \n" "loss : ${loss_percentage[$i]}"
-	       } >> "${DEBUG_OUTPUT_FILE}"
+
+	  } >> "${DEBUG_OUTPUT_FILE}"
 	  fi
 
 
@@ -513,10 +497,19 @@ for ((leaf_idx=1; leaf_idx <= ${num_leafs}; leaf_idx++)); do
   fi
 
 ####################################################################################################################################################
+
+echo "------------ Output for leaf${leaf_idx} saved at ${TRACK_OUTPUT_FILE}----------------"
+
+
 done ###### End of for ((leaf_idx=1; leaf_idx <= ${num_leafs}; leaf_idx++)); ########
 
 # Loop through each leaf
 for ((i = 1; i <= num_leafs; i+=2)); do
+
+   if [[ ! ("$SWITCH_NAME" =~ "leaf$i" || "$SWITCH_NAME" == "all") ]];then
+ 	 continue
+   fi
+
     track_file1="$ZONE/leaf${i}_track_output.txt"
     track_file2="$ZONE/leaf$((i+1))_track_output.txt"
 
