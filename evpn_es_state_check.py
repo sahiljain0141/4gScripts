@@ -36,11 +36,13 @@ def get_router_info(router_ip, username, password):
     # Execute show l2vpn evpn es command
     stdin, stdout, stderr = ssh.exec_command("show l2vpn evpn es")
     es_output = stdout.read().decode("utf-8")
+    es_output_lines = es_output.split('\n')[3:]
 
+    """
     index = es_output.find("--------------------------------------------------------------------------------------")
-
+    """
     # Remove the prefix
-    es_output = es_output[index:]
+    es_output = '\n'.join(es_output_lines)
 
     # Close the SSH connection
     ssh.close()
@@ -178,7 +180,7 @@ def main():
             # Write the header only once if the file is empty
             # Define the values to format
             version_output, es_output = get_router_info(ip, username, password)
-            
+             
             if version_output and es_output:
                l2vpn_evpn_es_info = parse_router_info(ip, version_output, es_output)
                all_results.extend(l2vpn_evpn_es_info)

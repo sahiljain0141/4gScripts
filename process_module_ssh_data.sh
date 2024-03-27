@@ -18,7 +18,7 @@ process_evpn_es_data() {
 process_lldp_data() {
     local output="$1"
     local line=""
-    local file="trichy/lldp_leaf1.txt"
+    local file="$OUTPUT_FILE"
     local header_printed=false
 
     local neighbour=""

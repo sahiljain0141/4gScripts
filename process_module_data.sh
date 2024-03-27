@@ -1,3 +1,4 @@
+
 process_bgp_data()
 {
     local input_json="$1"
@@ -11,13 +12,8 @@ process_bgp_data()
     peer_states=($(echo "$input_json" | awk -F'"peer-state":' '{print $2}' | tr -d '," '))
 
     ######## Verify the state count for switch using function call#########
-    match=$(verify_state_count "$switch" "${#peer_states[@]}") 
+    verify_state_count "$switch" "${#peer_states[@]}" 
 
-    if [[ $match == "false" ]];then
-	    echo "INCORRECT_STATE!!! state count ${#peer_states[@]} mismatched for $switch"
-    fi
-
-    
     for ((i=0; i<${#peer_addresses[@]}; i++)); do
       ###############Reset Value of match flag #############################
       local match="true"
@@ -36,6 +32,7 @@ process_bgp_data()
 
     if [[ $match == "true" ]];then
 	     printf "%-24s \n" "SWITCH $switch is in CORRECT-STATE :)"
+	     
     fi	
 }  
 

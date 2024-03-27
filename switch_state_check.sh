@@ -99,11 +99,12 @@ awk_string["lacp_ports"]="bonding:lacp-ports"
 
 ############################### Declare Functions ######################################
 ### Below function prints the message in Red ###
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
+
 print_error(){
   text=$1
-  RED='\033[0;31m'
-  NC='\033[0m' # No Color
-
   echo -e "${RED}${text}${NC}"
 }
 
@@ -301,21 +302,22 @@ verify_state_count()
     local state_count=0
     local match="true"
 
-      echo "input_state_count: $2"
+     echo "input_state_count: $2"
  
     if [[ $VERSBOSE == "-v" ]];then
       echo "input_state_count: $2"
     fi
     case $MODULE in
       "bgp")
-        if [[ $switch_name == *"$spine"* ]]; then
+        if [[ "$switch_name" == *"spine"* ]]; then
           match=$( [ "$input_state_count" == "8" ] && echo "true" || echo "false" )
         else
           match=$( [ "$input_state_count" == "2" ] && echo "true" || echo "false" )
-        fi	    
+       	fi	    
         ;;
+
       "ospf")
-        if [[ $switch_name == *"$spine"* ]]; then
+        if [[ $switch_name == *"spine"* ]]; then
           match=$( [ "$input_state_count" == "6" ] && echo "true" || echo "false" )
         else
           match=$( [ "$input_state_count" == "2" ] && echo "true" || echo "false" )
@@ -323,7 +325,10 @@ verify_state_count()
         ;;
     esac
 
-    echo "$match"
+    if [[ "$match" == "false" ]];then
+            print_error "INCORRECT_STATE_COUNT!!! state count $input_state_count mismatched for $switch_name"
+    fi
+
 }
 
 ######################  Source file containing functions for processing module json data ######
@@ -346,6 +351,9 @@ fi
 
 if [[ ! ( -d $ZONE/$MODULE ) ]];then
   mkdir -p $ZONE/$MODULE
+else
+  # Remove already existing files	
+  rm -r $ZONE/$MODULE/*
 fi
 
 
